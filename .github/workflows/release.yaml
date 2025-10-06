@@ -56,7 +56,7 @@ jobs:
             - name: Upload build assets (${{ matrix.packages }}.pdf)
               uses: actions/upload-artifact@v4
               with:
-                  name: ctfp
+                  name: ctfp-${{ matrix.packages }}
                   path: out/*
 
     release:
@@ -88,7 +88,7 @@ jobs:
             - name: Download build assets (${{ matrix.packages }}.pdf)
               uses: actions/download-artifact@v4.1.7
               with:
-                  name: ctfp
+                  name: ctfp-${{ matrix.packages }}
                   path: ctfp
 
             - name:
