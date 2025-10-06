@@ -54,7 +54,7 @@ jobs:
                   cp -ar ./result/* out/
 
             - name: Upload build assets (${{ matrix.packages }}.pdf)
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v4
               with:
                   name: ctfp
                   path: out/*
