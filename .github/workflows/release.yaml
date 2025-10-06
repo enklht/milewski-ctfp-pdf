@@ -4,6 +4,12 @@ on:
     push:
         tags:
             - "**"
+    workflow_dispatch:
+        inputs:
+            tag:
+                description: "Tag name for manual release (e.g., v1.0.0)"
+                required: false
+                default: "manual-run"
 
 jobs:
     determine-matrix:
